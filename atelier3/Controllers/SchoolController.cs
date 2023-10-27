@@ -1,9 +1,11 @@
 ﻿using atelier3.Models;
 using atelier3.Models.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace atelier3.Controllers
 {
+    [Authorize]
     public class SchoolController : Controller
     {
         private ISchoolRepository schoolRepository;
@@ -11,6 +13,7 @@ namespace atelier3.Controllers
         {
             this.schoolRepository = schoolRepository;
         }
+        [AllowAnonymous]
         //GET: SchoolController
         public ViewResult Index()
         {
