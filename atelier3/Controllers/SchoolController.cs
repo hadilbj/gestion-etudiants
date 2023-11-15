@@ -28,6 +28,7 @@ namespace atelier3.Controllers
             return View(model);
         }
 
+        [HttpGet]
         public ActionResult Create()
         {
             

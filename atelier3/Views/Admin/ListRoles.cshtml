@@ -15,8 +15,9 @@
 			<div class="card-body"> <h5 class="card-title">@role.Name</h5> </div>
 			<div class="card-footer">
 				<form method="post" asp-action="DeleteRole" asp-route-id="@role.Id">
-					<a asp-controller="Admin" asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-primary">Edit</a>
-					<span id="confirmDeleteSpan_@role.Id" style="display:none">	
+					<a asp-controller="Admin" asp-action="EditRole"
+					 asp-route-id="@role.Id" class="btn btn-primary">Edit</a>
+					<span id="confirmDeleteSpan_@role.Id" style="display:none">
 						<span>Are you sure you want to delete?</span>
 						<button type="submit" class="btn btn-danger">Yes</button>
 						<a href="#" class="btn btn-primary" onclick="confirmDelete('@role.Id', false)">No</a>
@@ -41,7 +42,7 @@ else
 			</h5>
 			<a class="btn btn-primary" style="width:auto"
 				asp-controller="administration" asp-action="CreateRole">
-				Create Role
+				 Create Role
 			</a>
 		</div>
 	</div>
