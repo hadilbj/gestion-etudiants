@@ -1,4 +1,5 @@
 ﻿using atelier3.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,6 +16,12 @@ namespace atelier3.Controllers
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+        }
+
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
 
         [HttpGet]

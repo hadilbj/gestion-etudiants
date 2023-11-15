@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace atelier3.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin,Manager")]
     public class SchoolController : Controller
     {
         private ISchoolRepository schoolRepository;
